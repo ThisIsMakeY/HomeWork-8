@@ -1,0 +1,80 @@
+
+/* ==========Задание №1========== */
+
+.holder__form {
+    max-width: 450px;
+    width: 100%;
+}
+
+
+.form__wrap {
+    width: 0%;
+    min-width: 250px;
+}
+
+.form__wrap p {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* ==========Задание №2========== */
+
+textarea {
+    resize: none;
+    width: 100%;
+    margin: 20px 0;
+    height: 150px;
+}
+
+/* ==========Задание №3========== */
+
+body {
+    background-color: #e6e3e3;
+}
+
+.check__wrap {
+    display: inline-block;
+    position: relative;
+    margin: 0 20px;
+}
+
+.check {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.form__label {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    color: aqua;
+    background: #c6c6c6;
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.form__label::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #fff;
+    /* transform: scale(1.1); */
+    transition: .3s;
+}
+
+.check:checked ~ .form__label {
+    background-color: #40e551;
+}
+
+.check:checked ~ .form__label::after {
+    left: 40px;
+}
